@@ -13,6 +13,19 @@
       height: 100%
       flex: 1 1 calc(70% - 30px)
       overflow: hidden
+      .owl-dots
+        position: absolute
+        left: 5%
+        bottom: 30px
+        button
+          height: 20px
+          width: 20px
+          border-radius: 50%
+          background-color: rgba(150, 150, 150, 1)
+        button.active
+            background-color: rgba(50, 50, 50, 1)
+        button:not(:last-child)
+          margin-right: 15px
       .left_block_item
         display: flex
         flex-wrap: wrap
@@ -28,7 +41,40 @@
           padding: 0 15px
           min-width: 320px
           background-color: rgba(243,243,243,1)
-
+          button
+            background-color: rgba(138,197,62,1)
+            border: none
+            font-size: 12px
+            color: rgba(255, 255, 255, 1)
+            text-transform: uppercase
+            padding: 20px 50px 20px 50px
+            transition: all .2s
+            cursor: pointer
+            position: relative
+          button:after
+            content: ''
+            position: absolute
+            left: 0
+            top: calc(50% - 3px)
+            background-color: rgba(138,197,62,1)
+            height: 2px
+            width: 0
+            transition: all .8s
+          button:before
+            content: ''
+            position: absolute
+            right: 0
+            height: 2px
+            top: calc(50% - 3px)
+            background-color: rgba(138,197,62,1)
+            width: 0
+            transition: all .8s
+          button:hover
+            background-color: rgba(0, 0, 0, 1)
+            &:after
+              width: 25px
+            &:before
+              width: 25px
           span
             margin-bottom: calc(15px + 1.13vw)
         .left_block_img
@@ -43,3 +89,57 @@
       flex: 1 1 30%
       height: 100vh
       background-color: rgba(22,28,36,1)
+      padding: 20px 80px 20px 80px
+      position: relative
+      nav
+        height: 100%
+        ul
+          display: flex
+          flex-wrap: wrap
+          flex-direction: column
+          justify-content: space-between
+          height: 100%
+          text-align: end
+          .lang
+            display: flex
+            justify-content: center
+            a:not(:last-child)
+              margin-right: 15px
+            a
+              position: relative
+            a:after
+              content: ''
+              position: absolute
+              left: 0
+              bottom: -5px
+              height: 2px
+
+              background-color: rgba(138,197,62,1)
+              width: 0px
+              transition: all .8s
+            a:hover
+              color: rgba(138,197,62,1)
+              &:after
+                width: 20px
+          li
+            position: relative
+            a
+              text-decoration: none
+              text-transform: uppercase
+              color: rgba(255, 255, 255, 1)
+              transition: all .5s
+              position: relative
+            &:after
+              content: ''
+              position: absolute
+              right: -80px
+              height: 2px
+              top: calc(50% - 2px)
+              background-color: rgba(138,197,62,1)
+              width: 0
+              transition: all .8s
+          li:not(:first-child):hover
+            a
+              color: rgba(138,197,62,1)
+            &:after
+              width: 50px

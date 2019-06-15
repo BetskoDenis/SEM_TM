@@ -38,6 +38,20 @@ h2 {
         -ms-flex: 1 1 calc(70% - 30px);
             flex: 1 1 calc(70% - 30px);
     overflow: hidden; }
+    .section_first .section_first_wrapper .left_block_wrapper .owl-dots {
+      position: absolute;
+      left: 5%;
+      bottom: 30px; }
+      .section_first .section_first_wrapper .left_block_wrapper .owl-dots button {
+        height: 20px;
+        width: 20px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        background-color: #969696; }
+      .section_first .section_first_wrapper .left_block_wrapper .owl-dots button.active {
+        background-color: #323232; }
+      .section_first .section_first_wrapper .left_block_wrapper .owl-dots button:not(:last-child) {
+        margin-right: 15px; }
     .section_first .section_first_wrapper .left_block_wrapper .left_block_item {
       display: -webkit-box;
       display: -webkit-flex;
@@ -76,6 +90,48 @@ h2 {
         padding: 0 15px;
         min-width: 320px;
         background-color: #f3f3f3; }
+        .section_first .section_first_wrapper .left_block_wrapper .left_block_item .left_block_info button {
+          background-color: #8ac53e;
+          border: none;
+          font-size: 12px;
+          color: white;
+          text-transform: uppercase;
+          padding: 20px 50px 20px 50px;
+          -webkit-transition: all .2s;
+          -o-transition: all .2s;
+          transition: all .2s;
+          cursor: pointer;
+          position: relative; }
+        .section_first .section_first_wrapper .left_block_wrapper .left_block_item .left_block_info button:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: -webkit-calc(50% - 3px);
+          top: calc(50% - 3px);
+          background-color: #8ac53e;
+          height: 2px;
+          width: 0;
+          -webkit-transition: all .8s;
+          -o-transition: all .8s;
+          transition: all .8s; }
+        .section_first .section_first_wrapper .left_block_wrapper .left_block_item .left_block_info button:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          height: 2px;
+          top: -webkit-calc(50% - 3px);
+          top: calc(50% - 3px);
+          background-color: #8ac53e;
+          width: 0;
+          -webkit-transition: all .8s;
+          -o-transition: all .8s;
+          transition: all .8s; }
+        .section_first .section_first_wrapper .left_block_wrapper .left_block_item .left_block_info button:hover {
+          background-color: black; }
+          .section_first .section_first_wrapper .left_block_wrapper .left_block_item .left_block_info button:hover:after {
+            width: 25px; }
+          .section_first .section_first_wrapper .left_block_wrapper .left_block_item .left_block_info button:hover:before {
+            width: 25px; }
         .section_first .section_first_wrapper .left_block_wrapper .left_block_item .left_block_info span {
           margin-bottom: -webkit-calc(15px + 1.13vw);
           margin-bottom: calc(15px + 1.13vw); }
@@ -97,4 +153,81 @@ h2 {
         -ms-flex: 1 1 30%;
             flex: 1 1 30%;
     height: 100vh;
-    background-color: #161c24; }
+    background-color: #161c24;
+    padding: 20px 80px 20px 80px;
+    position: relative; }
+    .section_first .section_first_wrapper .menu_right_block nav {
+      height: 100%; }
+      .section_first .section_first_wrapper .menu_right_block nav ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        height: 100%;
+        text-align: end; }
+        .section_first .section_first_wrapper .menu_right_block nav ul .lang {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center; }
+          .section_first .section_first_wrapper .menu_right_block nav ul .lang a:not(:last-child) {
+            margin-right: 15px; }
+          .section_first .section_first_wrapper .menu_right_block nav ul .lang a {
+            position: relative; }
+          .section_first .section_first_wrapper .menu_right_block nav ul .lang a:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 2px;
+            background-color: #8ac53e;
+            width: 0px;
+            -webkit-transition: all .8s;
+            -o-transition: all .8s;
+            transition: all .8s; }
+          .section_first .section_first_wrapper .menu_right_block nav ul .lang a:hover {
+            color: #8ac53e; }
+            .section_first .section_first_wrapper .menu_right_block nav ul .lang a:hover:after {
+              width: 20px; }
+        .section_first .section_first_wrapper .menu_right_block nav ul li {
+          position: relative; }
+          .section_first .section_first_wrapper .menu_right_block nav ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+            position: relative; }
+          .section_first .section_first_wrapper .menu_right_block nav ul li:after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            height: 2px;
+            top: -webkit-calc(50% - 2px);
+            top: calc(50% - 2px);
+            background-color: #8ac53e;
+            width: 0;
+            -webkit-transition: all .8s;
+            -o-transition: all .8s;
+            transition: all .8s; }
+        .section_first .section_first_wrapper .menu_right_block nav ul li:not(:first-child):hover a {
+          color: #8ac53e; }
+        .section_first .section_first_wrapper .menu_right_block nav ul li:not(:first-child):hover:after {
+          width: 50px; }

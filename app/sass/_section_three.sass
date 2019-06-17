@@ -1,0 +1,91 @@
+.section_three
+  background-color: rgba(243,243,243,1)
+  padding: calc(15px + 2.63vw) 0
+  .three_block__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    .three_block__item
+      flex: 1 1 400px
+      margin: 20px
+      max-width: 400px
+      span
+        line-height: 1.5
+  .certificate_block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    max-height: 500px
+    position: relative
+    .owl-nav
+      opacity: 0
+      transition: all .5s
+      .owl-prev
+        position: absolute
+        top: calc(50% - 10px)
+        left: 0
+        border-top: 2px solid rgba(138,197,62,1)
+        border-right: 2px solid rgba(138,197,62,1)
+        height: 20px
+        width: 20px
+        transform: rotate(-135deg)
+        outline: none
+        span
+        [aria-label]
+          display: none
+      .owl-next
+         position: absolute
+         top: calc(50% - 10px)
+         right: 0
+         border-top: 2px solid rgba(138,197,62,1)
+         border-right: 2px solid rgba(138,197,62,1)
+         height: 20px
+         width: 20px
+         transform: rotate(45deg)
+         outline: none
+         span
+         [aria-label]
+           display: none
+
+    .certificate_item
+      margin: 0 15px
+      display: inline-flex
+      height: 100%
+      position: relative
+      img
+        height: 100%
+        object-fit: cover
+        transition: all .5s
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-image: url("../img/1.png")
+        background-repeat: no-repeat
+        background-position: center
+        z-index: 5
+        display: none
+      &:after
+        content: ''
+        position: absolute
+        top: 5%
+        left: 5%
+        right: 5%
+        bottom: 5%
+        background-color: rgba(138,197,62,.5)
+        transition: all .5s
+        opacity: 0
+      &:hover
+        img
+          transform: scale(.9)
+        &:before
+          display: block
+        &:after
+          opacity: 1
+          transform: scale(1.1)
+    &:hover
+      .owl-nav
+        opacity: 1

@@ -38,6 +38,24 @@ h4 {
   font-family: "HelveticaNeueCyr-Bold";
   src: url("../fonts/Helvetica/HelveticaNeueCyr-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Helvetica/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/Helvetica/HelveticaNeueCyr-Bold.ttf") format("truetype"); }
 
+.section_first .button_scroll_top {
+  height: 30px;
+  width: 30px;
+  border-top: 2px solid #8ac53e;
+  border-right: 2px solid #8ac53e;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  z-index: 10;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  display: none; }
+
 .section_first .section_first_wrapper {
   position: relative;
   display: -webkit-box;

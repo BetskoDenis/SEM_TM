@@ -74,4 +74,26 @@ $('.button_burger').on('click', function () {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
+    $('.certificate_block').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+            verticalFit: true
+        },
+        gallery: {
+            enabled: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300, // don't foget to change the duration also in CSS
+            opener: function (element) {
+                return element.find('img');
+            }
+        }
+
+    });
+
 })

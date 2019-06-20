@@ -129,10 +129,10 @@ $('.button_burger').on('click', function () {
             0:{
                 items:1
             },
-            450:{
+            320:{
                 items:2
             },
-            600:{
+            700:{
                 items:3
             },
         }
@@ -158,5 +158,46 @@ $('.button_burger').on('click', function () {
         }
 
     });
+    $('.production_item.menu_smart').on('click',function () {
+        $('.production_item :before').css('width','60px')
+        $('.production_item_result__wrapper.smart').css('display','flex')
+        $('.production_item_result__wrapper.bushel').css('display','none')
+        $('.production_item_result__wrapper.present').css('display','none')
+    });
+    $('.production_item.menu_bushel').on('click',function () {
+        $('.production_item_result__wrapper.smart').css('display','none')
+        $('.production_item_result__wrapper.bushel').css('display','flex')
+        $('.production_item_result__wrapper.present').css('display','none')
+    });
+    $('.production_item.menu_present').on('click',function () {
+        $('.production_item_result__wrapper.smart').css('display','none')
+        $('.production_item_result__wrapper.bushel').css('display','none')
+        $('.production_item_result__wrapper.present').css('display','flex')
+    });
+    $('.production_item.menu_shamp').on('click',function () {
+        $('.production_item_result__wrapper.shamp').css('display','flex')
+        $('.production_item_result__wrapper.burg').css('display','none')
+        $('.production_item_result__wrapper.alz').css('display','none')
+        $('.production_item_result__wrapper.bordo').css('display','none')
+    });
+    $('.production_item.menu_burg').on('click',function () {
+        $('.production_item_result__wrapper.shamp').css('display','none')
+        $('.production_item_result__wrapper.burg').css('display','flex')
+        $('.production_item_result__wrapper.alz').css('display','none')
+        $('.production_item_result__wrapper.bordo').css('display','none')
+    });
+    $('.production_item.menu_alz').on('click',function () {
+        $('.production_item_result__wrapper.shamp').css('display','none')
+        $('.production_item_result__wrapper.burg').css('display','none')
+        $('.production_item_result__wrapper.alz').css('display','flex')
+        $('.production_item_result__wrapper.bordo').css('display','none')
+    });
+    $('.production_item.menu_bordo').on('click',function () {
+        $('.production_item_result__wrapper.shamp').css('display','none')
+        $('.production_item_result__wrapper.burg').css('display','none')
+        $('.production_item_result__wrapper.alz').css('display','none')
+        $('.production_item_result__wrapper.bordo').css('display','flex')
+    })
+
 
 })

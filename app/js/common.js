@@ -74,7 +74,70 @@ $('.button_burger').on('click', function () {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
+    $("#section_two").on('click','a', function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+    $("#section_three").on('click','a', function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+    $("#section_four").on('click','a', function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+    $("#production_item_result").on('click','a', function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
     $('.certificate_block').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+            verticalFit: true
+        },
+        gallery: {
+            enabled: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300, // don't foget to change the duration also in CSS
+            opener: function (element) {
+                return element.find('img');
+            }
+        }
+
+    });
+    $('.img_prod').owlCarousel({
+        items: 4,
+        loop: true,
+        dots: false,
+        nav: true,
+        smartSpeed: 1300,
+        responsive:{
+            0:{
+                items:1
+            },
+            450:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+        }
+    })
+    $('.img_prod').magnificPopup({
         delegate: 'a', // child items selector, by clicking on it popup will open
         type: 'image',
         closeOnContentClick: false,

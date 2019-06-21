@@ -13,18 +13,21 @@
       flex-direction: column
       justify-content: space-around
       min-width: 320px
+      .production_item_menu_info
+        width: 100%
 
       p
         margin-bottom: calc(15px + .68vw)
         color: rgba(0, 0, 0, 1)
         line-height: 1.5
+        width: 100%
       .production_item_menu__wrapper
-        padding: 0 40px
+        padding: 0 calc(15px + 1.88vw)
         position: relative
         .production_item
-
+          width: 100%
           border-left: 8px solid rgba(138,197,62,1)
-          display: flex
+          display: inline-flex
           min-height: 150px
           justify-content: space-between
           padding: 15px
@@ -35,6 +38,7 @@
           margin: 25px 0
           .production_item_info
             padding: 5px 10px
+
           img
             height: 100px
             width: 100px
@@ -72,6 +76,12 @@
       position: relative
       z-index: 1
       padding: calc(15px + 2.79vw) calc(15px + 5.59vw) calc(15px + 2.79vw) calc(15px + 2.79vw)
+    .production_item_result.berries
+      background-image: url("../img/berries/product_type__bg_2-1153x768.jpg")
+    .production_item_result.wine
+      background-image: url("../img/wine/product_type__bg_-510x768.jpg")
+    .production_item_result.melon
+      background-image: url("../img/melon/product_type__bg_4-1164x768.jpg")
     .production_item_result:after
       content: ''
       position: absolute

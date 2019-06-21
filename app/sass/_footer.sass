@@ -1,2 +1,54 @@
 .footer
   background-color: rgba(31,38,48,1)
+  padding: 20px
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  .footer_logo
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 1 1 20%
+    //height: 100%
+  .footer_contact
+    width: 200px
+
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    flex: 1 1 20%
+    justify-content: center
+    border-left: 1px solid rgba(255, 255, 255, .2)
+    padding: 0 10px
+    p
+      color: rgba(255, 255, 255, 1)
+      font-size: 16px
+      margin-bottom: 15px
+
+    span
+      color: rgba(255, 255, 255, 1)
+      font-size: 16px
+      line-height: 1.5
+    &:not(:last-child)
+      margin-bottom: 10px
+  .footer_menu
+    flex: 1 1 60%
+    height: 250px
+    padding-left: 15px
+    nav
+      display: flex
+      flex-wrap: wrap
+      height: 100%
+      justify-content: center
+      align-items: center
+      li:not(:last-child)
+        margin-right: calc(15px + 1.13vw)
+      li
+        list-style-type: none
+        a
+          text-decoration: none
+          color: rgba(255, 255, 255, 1)
+          text-transform: uppercase
+          transition: all .5s
+          &:hover
+            color: rgba(138,197,62,1)

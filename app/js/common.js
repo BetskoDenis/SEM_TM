@@ -50,13 +50,13 @@ $('.button_burger').on('click', function () {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
+        $('body,html').animate({scrollTop: top}, 1000);
     });
     $("#menu_mobile").on('click','a', function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
+        $('body,html').animate({scrollTop: top}, 1000);
     });
     $(window).scroll(function () {
         var windowPosition = $(this).scrollTop();
@@ -93,6 +93,12 @@ $('.button_burger').on('click', function () {
         $('body,html').animate({scrollTop: top}, 1000);
     });
     $("#production_item_result").on('click','a', function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+    $("#footer").on('click','a', function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;

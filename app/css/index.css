@@ -4,7 +4,8 @@
 
 body {
   font-size: 14px;
-  min-width: 320px; }
+  min-width: 320px;
+  overflow-x: hidden; }
 
 .container {
   max-width: 1300px;
@@ -46,9 +47,16 @@ h6 {
   margin-bottom: 14px;
   color: white; }
 
+p, span, a {
+  font-family: 'HelveticaNeueCyr-Roman',sans-serif; }
+
 @font-face {
   font-family: "HelveticaNeueCyr-Bold";
   src: url("../fonts/Helvetica/HelveticaNeueCyr-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Helvetica/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/Helvetica/HelveticaNeueCyr-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Roman";
+  src: url("../fonts/Helvetica/HelveticaNeueCyr-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/Helvetica/HelveticaNeueCyr-Roman.woff") format("woff"), url("../fonts/Helvetica/HelveticaNeueCyr-Roman.ttf") format("truetype"); }
 
 .section_first .button_scroll_top {
   height: 30px;
@@ -414,8 +422,8 @@ h6 {
       position: relative;
       cursor: pointer;
       margin: 10px;
-      max-height: 600px;
-      max-width: 800px;
+      max-height: 400px;
+      max-width: 600px;
       min-width: 320px; }
       .section_two .container .section_two__wrapper .section_two__item a {
         height: 100%;
@@ -634,20 +642,25 @@ h6 {
         -ms-flex-pack: distribute;
             justify-content: space-around;
     min-width: 320px; }
+    .section_four .block_production .production_item_menu .production_item_menu_info {
+      width: 100%; }
     .section_four .block_production .production_item_menu p {
       margin-bottom: -webkit-calc(15px + .68vw);
       margin-bottom: calc(15px + .68vw);
       color: black;
-      line-height: 1.5; }
+      line-height: 1.5;
+      width: 100%; }
     .section_four .block_production .production_item_menu .production_item_menu__wrapper {
-      padding: 0 40px;
+      padding: 0 -webkit-calc(15px + 1.88vw);
+      padding: 0 calc(15px + 1.88vw);
       position: relative; }
       .section_four .block_production .production_item_menu .production_item_menu__wrapper .production_item {
+        width: 100%;
         border-left: 8px solid #8ac53e;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
         min-height: 150px;
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
@@ -732,6 +745,12 @@ h6 {
     z-index: 1;
     padding: -webkit-calc(15px + 2.79vw) -webkit-calc(15px + 5.59vw) -webkit-calc(15px + 2.79vw) -webkit-calc(15px + 2.79vw);
     padding: calc(15px + 2.79vw) calc(15px + 5.59vw) calc(15px + 2.79vw) calc(15px + 2.79vw); }
+  .section_four .block_production .production_item_result.berries {
+    background-image: url("../img/berries/product_type__bg_2-1153x768.jpg"); }
+  .section_four .block_production .production_item_result.wine {
+    background-image: url("../img/wine/product_type__bg_-510x768.jpg"); }
+  .section_four .block_production .production_item_result.melon {
+    background-image: url("../img/melon/product_type__bg_4-1164x768.jpg"); }
   .section_four .block_production .production_item_result:after {
     content: '';
     position: absolute;
@@ -970,4 +989,102 @@ h6 {
     z-index: 1; }
 
 .footer {
-  background-color: #1f2630; }
+  background-color: #1f2630;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  position: relative; }
+  .footer .footer_logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 20%;
+        -ms-flex: 1 1 20%;
+            flex: 1 1 20%; }
+  .footer .footer_contact {
+    width: 200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 20%;
+        -ms-flex: 1 1 20%;
+            flex: 1 1 20%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 10px; }
+    .footer .footer_contact p {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 15px; }
+    .footer .footer_contact span {
+      color: white;
+      font-size: 16px;
+      line-height: 1.5; }
+    .footer .footer_contact:not(:last-child) {
+      margin-bottom: 10px; }
+  .footer .footer_menu {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 60%;
+        -ms-flex: 1 1 60%;
+            flex: 1 1 60%;
+    height: 250px;
+    padding-left: 15px; }
+    .footer .footer_menu nav {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      height: 100%;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .footer .footer_menu nav li:not(:last-child) {
+        margin-right: -webkit-calc(15px + 1.13vw);
+        margin-right: calc(15px + 1.13vw); }
+      .footer .footer_menu nav li {
+        list-style-type: none; }
+        .footer .footer_menu nav li a {
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+          -webkit-transition: all .5s;
+          -o-transition: all .5s;
+          transition: all .5s; }
+          .footer .footer_menu nav li a:hover {
+            color: #8ac53e; }

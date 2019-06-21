@@ -129,7 +129,7 @@ $('.button_burger').on('click', function () {
             0:{
                 items:1
             },
-            320:{
+            500:{
                 items:2
             },
             700:{

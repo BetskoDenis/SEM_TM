@@ -4,6 +4,7 @@
     display: flex
     flex-wrap: wrap
     height: 100%
+    margin-bottom: 10px
     .production_item_menu
       padding: 30px calc(15px + 1.88vw)
       flex: 1 1 50%
@@ -11,7 +12,7 @@
       flex-wrap: wrap
       flex-direction: column
       justify-content: space-around
-      min-width: 500px
+      min-width: 320px
 
       p
         margin-bottom: calc(15px + .68vw)
@@ -24,7 +25,7 @@
 
           border-left: 8px solid rgba(138,197,62,1)
           display: flex
-          height: 150px
+          min-height: 150px
           justify-content: space-between
           padding: 15px
           box-shadow: 5px 5px 25px rgba(0,0,0,.2)
@@ -32,6 +33,8 @@
           text-decoration: none
           transition: all .5s
           margin: 25px 0
+          .production_item_info
+            padding: 5px 10px
           img
             height: 100px
             width: 100px
@@ -53,12 +56,17 @@
       .contack_block
         display: flex
         justify-content: space-around
+        flex-wrap: wrap
+
         .contack_block_item
+          flex: 1 1 33%
           display: flex
           flex-direction: column
+          align-items: center
+          margin-bottom: 10px
     .production_item_result
       flex: 1 1 50%
-      min-width: 500px
+      min-width: 320px
       background-image: url("../img/product_type__bg_1-1627x1080.jpg")
 
       position: relative
@@ -190,3 +198,46 @@
       display: none
     .production_item_result__wrapper.shamp
       height: 100%
+  .block_map
+    display: flex
+    justify-content: center
+    padding: 15px
+    img
+      width: 100%
+      max-width: 1500px
+      object-fit: cover
+      height: 100%
+  .section_contact
+    background-color: rgba(0, 0, 0, 1)
+    padding: calc(15px + 2.39vw)
+    position: relative
+    .contact__wrapper
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+
+      .contact_item
+        color: rgba(255, 255, 255, 1)
+        padding: 0 calc(15px + .79vw)
+        margin-bottom: 15px
+        &:not(:last-child)
+          border-right: 1px solid rgba(255, 255, 255, 1)
+          @media (max-width: 604px)
+            border-right: none
+        p
+          margin-bottom: calc(15px + .79vw)
+        .contact_item_last
+          display: flex
+          flex-wrap: wrap
+          flex-direction: column
+        .contact_item_last:not(:last-child)
+          margin-bottom: calc(15px + .79vw)
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: rgba(255, 2555, 255, .1)
+      z-index: 1

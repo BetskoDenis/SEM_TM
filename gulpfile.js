@@ -44,9 +44,9 @@ gulp.task('browser-sync', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-        'app/libs/owl-carousel/js/owl.carousel-2.min.js',
+        'app/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js',
         'app/libs/owl-carousel/js/owl.carousel-2.thumbs.min.js',
-        'app/libs/magnific-popup/js/jquery.magnific-popup.min.js'
+        'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
